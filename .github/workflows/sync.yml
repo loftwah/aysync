@@ -1,8 +1,8 @@
-name: Run Ruby script
+name: Amazon Music YouTube Playlist Sync
 
 on:
   schedule:
-    - cron: '0 12 * * *'
+    - cron: "0 12 * * *"
 
 jobs:
   build:
@@ -11,3 +11,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run Ruby script
         run: ruby app.rb
+        env:
+          AMAZON_EMAIL: ${{ secrets.AMAZON_EMAIL }}
+          AMAZON_PASSWORD: ${{ secrets.AMAZON_PASSWORD }}
+          AMAZON_PLAYLIST_ID: ${{ secrets.AMAZON_PLAYLIST_ID }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
