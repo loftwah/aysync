@@ -17,5 +17,5 @@ This configuration will run the script `app.rb` on a schedule (every day at 12:0
     `AMAZON_PLAYLIST_ID`
     `YOUTUBE_API_KEY`
 
-- Replace the contents of `.github/workflows/sync.yml with the above configuration.
+- Replace the contents of `.github/workflows/sync.yml` with the above configuration.
 - Commit and push the changes to your repository. The script will run on the schedule specified in the configuration.
